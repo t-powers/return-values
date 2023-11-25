@@ -46,6 +46,10 @@
         return num * 12;
       }
 
+      function celsiusToF(num){
+        return (num * (9/5)+ 32)
+      }
+
       input.addEventListener("change", () => {
         const num = parseFloat(input.value);
         if (isNaN(num)) {
@@ -56,6 +60,9 @@
           para.textContent += `${num} factorial is ${factorial(num)}. `;
           para.textContent += `${num} radius is ${radius(num)}. `;
           para.textContent += `${num} inch-lbs to foot-lbs is ${lbsConversion(
+            num
+          )}. `;
+           para.textContent += `${num} celsius to fahrenheit ${celsiusToF(
             num
           )}. `;
         }
