@@ -46,8 +46,11 @@
         return num * 12;
       }
 
-      function celsiusToF(num){
-        return (num * (9/5)+ 32)
+      function celsiusToF(num) {
+        return num * (9 / 5) + 32;
+      }
+      function fahrenheitToC(num) {
+        return (num - 32) * (5 / 9);
       }
 
       input.addEventListener("change", () => {
@@ -62,7 +65,10 @@
           para.textContent += `${num} inch-lbs to foot-lbs is ${lbsConversion(
             num
           )}. `;
-           para.textContent += `${num} celsius to fahrenheit ${celsiusToF(
+          para.textContent += `${num} celsius to fahrenheit ${celsiusToF(
+            num
+          )}. `;
+          para.textContent += `${num} fahrenheit to celsius ${fahrenheitToC(
             num
           )}. `;
         }
